@@ -1,0 +1,4 @@
+com/curso/entidades/Usuario.class
+com/curso/servicios/GestionUsuariosRegitroService.class
+com/curso/web/UsuariosManagedBean.class
+com/curso/servicios/GestionUsuariosRegitroServiceLocal.class

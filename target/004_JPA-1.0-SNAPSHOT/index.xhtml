@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>inicio</title>
+    </h:head>
+    <h:body>
+        <h1>USUARIOS</h1>
+        
+        <!-- LISTA -->
+        
+        <h:dataTable value="#{usuariosManagedBean.listaUsuarios}" var="usuario">
+            
+            <h:column>
+                <f:facet name="header">ID</f:facet>
+                #{usuario.id}
+            </h:column>
+            
+              <h:column>
+                <f:facet name="header">Nombre</f:facet>
+                #{usuario.nombre}
+              </h:column>
+            
+              <h:column>
+                <f:facet name="header">Cargo </f:facet>
+                #{usuario.cargo}
+            </h:column>
+            
+        </h:dataTable>
+        
+        <hr/>
+        
+        <!-- FORMULARIO ALTA -->
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel>Nombre:</h:outputLabel>
+                <h:inputText value="#{usuariosManagedBean.usuario.nombre}"/>
+                
+                <h:outputLabel>Cargo:</h:outputLabel>
+                <h:inputText value="#{usuariosManagedBean.usuario.cargo}"/>
+                
+                <h:commandButton value="Dar de alta" action="#{usuariosManagedBean.btnGrabarUsuario()}" />
+            </h:panelGrid>
+        </h:form>
+        
+        
+        
+    </h:body>
+</html>
+
